@@ -7,10 +7,13 @@ const app = express()
 mongoConnection()
 
 app.use(express.json())
+
+app.use(express.static(`${__dirname}/public`))
+
 app.use("/api/v1/user",Router)
 
 app.get("/",(req,res,next)=>{
-    res.send("Welcome to the User Authentication")
+    res.sendFile(`${__dirname}/public/home.html`)
 })
 
 app.listen(3000,()=>{

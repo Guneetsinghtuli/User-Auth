@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <ol>
+        <li>POST -> <b>/api/v1/user/register </b> ==> To Create a new user, add these things in the body
+            <ul>
+                <li>name</li>
+                <li>email</li>
+                <li>number</li>
+                <li>password</li>
+            </ul>
+        </li>
+        <br>
+        <li>POST -> <b>/api/v1/user/login </b>  ==> To Login the account, add these things in the body
+            <ul>
+                <li>email</li>
+                <li>password</li>
+            </ul>
+        </li>
+        <br>
+        <li>POST -> <b>/api/v1/user/details </b>  ==> To get the details of the specific account,To get the id of the user you must login first , add these things in the body
+            <ul>
+                <li>id</li>
+            </ul>
+        </li>
+        <br>
+        <li>POST -> <b>/api/v1/user/login/pwd </b>  ==> To change password of the account, add these things in the body 
+            <ul>
+                <li>oldPassword</li>
+                <li>newPassword</li>
+            </ul>
+            <p>Make sure to add a header <b>authtoken</b> you will get the auth token in the login API</p>
+
+        </li>
+        <br>
+        <li>POST -> <b>/api/v1/user/login/update </b>  ==> To update name or number of the user, add these things in the body 
+            <ul>
+                <li>if you want to change the name use <b>name</b></li>
+                <li>if you want to change the number use <b>number</b></li>
+                <li>You can use both as well</li>
+            </ul>
+            <p>Make sure to add a header <b>authtoken</b> you will get the auth token in the login API</p>
+
+        </li>
+        <br>
+    </ol>
+</body>
+</html>
